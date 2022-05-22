@@ -1,0 +1,15 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang=""ja>
+    <head>
+        <title>{{title}}</title>
+        <!-- <link rel="stylesheet" type="text/css" href="{% static 'useradmin/css/standard.css' %}"/> -->
+    </head>
+    <body>
+        <h1>{{head}}</h1>
+        {% for upimg in loginuser.upimage_set.all %}
+        <a href="{% url 'imgselect' upimg.id %}"><img src="{{upimg.img.url}}" width="30%" height="30%"/></a>
+        {% endfor %}
+        <p><a href="{% url 'top' %}">TOPへ</a></p>
+    </body>
+</html>
