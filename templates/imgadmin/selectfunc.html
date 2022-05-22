@@ -9,5 +9,6 @@
         <h1>{{head}}</h1>
         <img src="{{slctupimg.img.url}}" width="30%" height="30%"/>
         <p><a href="{% url 'top' %}">TOPへ</a></p>
+        <p><a href="{% url 'esrcfexe' slctupimg.id %}">ESRGAN（超解像）: 適切なモデルがあれば画像の解像度を自然にあげることができます。ただし色調の変化が起こり得ます。</a></p>
     </body>
 </html>
